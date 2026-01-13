@@ -122,7 +122,196 @@
               
             </div>  
           </div>
+          
+          
+
+          <!-- Classification Course Project -->
+          <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>Supervised Machine Learning: Classification</h3>
+            <span class="project-role">IBM Course Capstone Project</span>
+            <span class="project-date">Optimizing Exoplanet Discovery: Automated Classification of Kepler Objects of Interest</span>
+            <hr>
+            
+            <div class="project-description">  
+              <p>
+                This project serves as the final capstone for the IBM Supervised Machine Learning: Classification course, part of the IBM Machine Learning Professional Certificate on Coursera.
+              </p>
+              <p>
+                  <b>Objective:</b> To build and evaluate supervised machine learning models that automate the classification of Kepler Objects of Interest (KOIs) into "Exoplanets" or "Non-Exoplanets" using transit photometry features.
+              </p>
+
+
+              <!-- Collapsible section -->
+              <div class="collapse" id="11EDA-details">
+                
+                <p>
+                  <b>The Problem:</b> Identifying real planetary transits from a massive catalog of celestial signals is a manual bottleneck. The goal is to distinguish true exoplanets from astrophysical noise and instrumental false positives using data-driven patterns.
+                </p>
+                <p>
+                  <b>Approach:</b> I developed a classification pipeline using a NASA dataset containing 9,564 observations and 50 initial features. The methodology included:
+                </p>
+                <ul>
+                  <li><b>Data Refinement:</b> Filtered the dataset to train only on verified ground truth ("Confirmed" and "False Positive" classes) and removed potential data leakage columns like 'koi_score'.</li> 
+                  <li><b>Feature Engineering:</b> Focused on key transit features (period, depth, duration) and stellar attributes (temperature, radius).</li> 
+                  <li><b>Model Comparison:</b> Trained and compared three distinct classifiers: Logistic Regression, Support Vector Machine (SVM), and Random Forest.</li> 
+                </ul>
+
+                <p>
+                  <b>Key Findings:</b>
+                </p>
+                <ul>
+                  <li><u>Model Champion:</u> The Random Forest model significantly outperformed others, achieving an 87% accuracy and an AUPRC of 0.802.</li> 
+                  <li><u>Predictive Power:</u> 'koi_model_snr' (Signal-to-Noise Ratio) was the most critical feature, accounting for 20% of the model's decision-making importance.</li> 
+                  <li><u>High Reliability:</u> The final model achieved 85% precision, ensuring that telescope resources are rarely wasted on false leads.</li> 
+                  <li><u>Optimal Threshold:</u> Identified a decision threshold of 0.24 to maximize the F1-Score (81%), balancing missed discoveries against wasted resources.</li> 
+                </ul>
+
+                <p>
+                  <b>Conclusion:</b> The project successfully validated an automated filter for exoplanet detection, transforming a manual process into an efficient funnel that accelerates the search for habitable worlds.
+                </p>
+                <hr>  
+                <!--
+                <h4>Plots:</h4>
+                 Thumbnail INSIDE collapse 
+                <a href="assets/img/results/relativistic_planck_laws.jpg" target="_blank">
+                  <img src="assets/img/results/relativistic_planck_laws.jpg" alt="Planck Results" class="project-img">
+                </a>
+                <a href="assets/img/results/Energy density.png" target="_blank">
+                  <img src="assets/img/results/Energy density.png" alt="Planck Results" class="project-img">
+                </a>
+                <a href="assets/img/results/Spectral radiance.png" target="_blank">
+                  <img src="assets/img/results/Spectral radiance.png" alt="Planck Results" class="project-img">
+                </a>
+              -->
+
+                <div class="project-tools">
+                  <h6><b>Tools & Methods:</b> </h6>
+                  <ul>
+                    <li><b>Python & Scikit-Learn:</b> Utilized for implementing Logistic Regression, SVM, and Random Forest models.</li>
+                    <li><b>Data Preprocessing:</b> Applied 'Standard Scalar' normalization and stratified 80/20 train-test splitting.</li>
+                    <li><b>Evaluation Metrics:</b> Analyzed performance using ROC Curves, Precision-Recall Curves, and Confusion Matrices.</li>
+                    <li><b>Feature Importance:</b> Used Gini importance to rank physical parameters like planet radius ('koi_prad') and impact parameter ('koi_impact').</li>
+                  </ul>
+                </div>
+              </div>
               
+              
+
+              <!-- See more button -->
+              <button class="btn btn-link p-0" data-bs-toggle="collapse" data-bs-target="#11EDA-details" aria-expanded="false" aria-controls="thesis-details" onclick="this.innerText = this.innerText==='See more...' ? 'Collapse ▲' : 'See more...'">
+                See more...
+              </button>
+
+              
+              <hr>
+              <div class="cta-section" data-aos="fade-up" data-aos-delay="200">
+                <a href="assets/Reports/Classification Project Report.pdf" class="btn btn-primary" target="_blank">
+                  <i class="bi bi-file-earmark-text"></i>
+                Project Report
+                </a>
+                <a href="https://github.com/SyedAliAsghar2001/IBM-Coursera-ML-Professional-Certificate-Projects/tree/main/03-Supervised-Learning-Classification" class="btn btn-primary" target="_blank">
+                  <i class="bi bi-github"></i>
+                  Github Repo
+                </a>
+                <a href="assets/certificates/Classifcation ML Certificate.pdf" class="btn btn-primary" target="_blank">
+                  <i class="bi bi-award"></i>
+                  Certificate
+                </a>
+              </div>
+            </div>
+          </div>
+
+          
+          <!-- QSite Hackathon -->
+          
+          <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <h3> Quantum Solution to a Harmonic Oscillator</h3>
+            <span class="project-role">September 2024</span>
+            <span class="project-date">QSite Hackathon 2024 - Classiq Open Challenge</span>
+            <hr>
+            
+            <div class="project-description">  
+              <p>
+                This project was solution to the Classiq open challenge for QSite Hackathon 2024, which involved the practical implementation of a theoretical quantum algorithm to solve a harmonic oscillator differential equation, addressing a core challenge in quantum computing: translating complex theory into executable code.
+              </p>
+              <p>
+                  <b>The Challenge:</b> The task was to implement a 2020 research paper by Tao Xin, et al., using the Classiq platform to solve the equation  
+                  <div class="equation">
+                    \[ y'' + \omega^2 y = 0, \quad y(0) = 1, \quad y'(0) = 1 \]
+                  </div>
+                  with quantum circuits, and then analyze the system's energy over time.
+              </p>
+
+
+              <!-- Collapsible section -->
+              <div class="collapse" id="Qhackathon">
+                
+                <p>
+                  <b>Methodology & Execution:</b> The solution followed a structured quantum algorithm pipeline:
+                </p>
+                <ul>
+                  <li><u>Problem Transformation:</u> The second-order differential equation was transformed into a first-order linear system suitable for quantum simulation.</li> 
+                  <li><u>Quantum Circuit Design:</u> A circuit was built using work qubits to represent position and velocity, and ancilla qubits to control the system's time evolution through controlled rotation gates.</li> 
+                  <li><u>Simulation & Analysis:</u> The circuit was executed on a simulator, and the results were decoded to calculate the kinetic and potential energy of the system over the time interval [0, 1].</li> 
+                </ul>
+
+                <p>
+                  <b>Key Results & Conclusion:</b> 
+                </p>
+
+                <p>The quantum simulation successfully produced results that reflected the expected oscillatory behavior of a harmonic oscillator. The measured states of the qubits allowed for the evaluation of the system's energy, validating the quantum algorithm as a viable method for solving differential equations and demonstrating a practical application of quantum computing for simulating physical systems.</p>
+                <hr>  
+                <!--
+                <h4>Plots:</h4>
+                 Thumbnail INSIDE collapse 
+                <a href="assets/img/results/relativistic_planck_laws.jpg" target="_blank">
+                  <img src="assets/img/results/relativistic_planck_laws.jpg" alt="Planck Results" class="project-img">
+                </a>
+                <a href="assets/img/results/Energy density.png" target="_blank">
+                  <img src="assets/img/results/Energy density.png" alt="Planck Results" class="project-img">
+                </a>
+                <a href="assets/img/results/Spectral radiance.png" target="_blank">
+                  <img src="assets/img/results/Spectral radiance.png" alt="Planck Results" class="project-img">
+                </a>
+              -->
+
+                <div class="project-tools">
+                  <h6><b>Tools & Technologies:</b> </h6>
+                  <ul>
+                    <li><b>Python:</b> Primary programming language for algorithm implementation.</li>
+                    <li><b>Classiq Platform:</b> End-to-end quantum software platform for design and optimization.</li>
+                    <li><b>Jupyter Notebook:</b> Interactive development environment for quantum programming.</li>
+                    
+                  </ul> 
+                </div>
+              </div>
+              
+              
+
+              <!-- See more button -->
+              <button class="btn btn-link p-0" data-bs-toggle="collapse" data-bs-target="#Qhackathon" aria-expanded="false" aria-controls="thesis-details" onclick="this.innerText = this.innerText==='See more...' ? 'Collapse ▲' : 'See more...'">
+                See more...
+              </button>
+
+              
+              <hr>
+              <div class="cta-section" data-aos="fade-up" data-aos-delay="200">
+                <a href="assets/Reports/QSite_Hackathon_Project_Report.pdf" class="btn btn-primary" target="_blank">
+                  <i class="bi bi-file-earmark-text"></i>
+                Project Report
+                </a>
+                <a href="https://github.com/SyedAliAsghar2001/Q-SITE-Classiq-Open-Challenge" class="btn btn-primary" target="_blank">
+                  <i class="bi bi-github"></i>
+                  Github Repo
+                </a>
+                <a href="assets/certificates/QHack 2nd position - Certificate - Ali Asghar.png" class="btn btn-primary" target="_blank">
+                  <i class="bi bi-award"></i>
+                  Certificate
+                </a>
+              </div>
+            </div>
+          </div>
+          
           <!-- MSc Thesis -->
           <div class="project-card" data-aos="fade-up" data-aos-delay="100">
             <h3>Relativistic and Nonextensive Generalizations of Planck’s
@@ -288,7 +477,7 @@
                   <i class="bi bi-file-earmark-text"></i>
                 Project Report
                 </a>
-                <a href="https://github.com/SyedAliAsghar2001/IBM-course-Exploratory-Data-Analysis-for-Machine-learning-" class="btn btn-primary" target="_blank">
+                <a href="https://github.com/SyedAliAsghar2001/IBM-Coursera-ML-Professional-Certificate-Projects/tree/main/01-Exploratory-Data-Analysis" class="btn btn-primary" target="_blank">
                   <i class="bi bi-github"></i>
                   Github Repo
                 </a>
@@ -300,95 +489,6 @@
             </div>
           </div>
 
-          <!-- QSite Hackathon -->
-          
-          <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-            <h3> Quantum Solution to a Harmonic Oscillator</h3>
-            <span class="project-role">September 2024</span>
-            <span class="project-date">QSite Hackathon 2024 - Classiq Open Challenge</span>
-            <hr>
-            
-            <div class="project-description">  
-              <p>
-                This project was solution to the Classiq open challenge for QSite Hackathon 2024, which involved the practical implementation of a theoretical quantum algorithm to solve a harmonic oscillator differential equation, addressing a core challenge in quantum computing: translating complex theory into executable code.
-              </p>
-              <p>
-                  <b>The Challenge:</b> The task was to implement a 2020 research paper by Tao Xin, et al., using the Classiq platform to solve the equation  
-                  <div class="equation">
-                    \[ y'' + \omega^2 y = 0, \quad y(0) = 1, \quad y'(0) = 1 \]
-                  </div>
-                  with quantum circuits, and then analyze the system's energy over time.
-              </p>
-
-
-              <!-- Collapsible section -->
-              <div class="collapse" id="Qhackathon">
-                
-                <p>
-                  <b>Methodology & Execution:</b> The solution followed a structured quantum algorithm pipeline:
-                </p>
-                <ul>
-                  <li><u>Problem Transformation:</u> The second-order differential equation was transformed into a first-order linear system suitable for quantum simulation.</li> 
-                  <li><u>Quantum Circuit Design:</u> A circuit was built using work qubits to represent position and velocity, and ancilla qubits to control the system's time evolution through controlled rotation gates.</li> 
-                  <li><u>Simulation & Analysis:</u> The circuit was executed on a simulator, and the results were decoded to calculate the kinetic and potential energy of the system over the time interval [0, 1].</li> 
-                </ul>
-
-                <p>
-                  <b>Key Results & Conclusion:</b> 
-                </p>
-
-                <p>The quantum simulation successfully produced results that reflected the expected oscillatory behavior of a harmonic oscillator. The measured states of the qubits allowed for the evaluation of the system's energy, validating the quantum algorithm as a viable method for solving differential equations and demonstrating a practical application of quantum computing for simulating physical systems.</p>
-                <hr>  
-                <!--
-                <h4>Plots:</h4>
-                 Thumbnail INSIDE collapse 
-                <a href="assets/img/results/relativistic_planck_laws.jpg" target="_blank">
-                  <img src="assets/img/results/relativistic_planck_laws.jpg" alt="Planck Results" class="project-img">
-                </a>
-                <a href="assets/img/results/Energy density.png" target="_blank">
-                  <img src="assets/img/results/Energy density.png" alt="Planck Results" class="project-img">
-                </a>
-                <a href="assets/img/results/Spectral radiance.png" target="_blank">
-                  <img src="assets/img/results/Spectral radiance.png" alt="Planck Results" class="project-img">
-                </a>
-              -->
-
-                <div class="project-tools">
-                  <h6><b>Tools & Technologies:</b> </h6>
-                  <ul>
-                    <li><b>Python:</b> Primary programming language for algorithm implementation.</li>
-                    <li><b>Classiq Platform:</b> End-to-end quantum software platform for design and optimization.</li>
-                    <li><b>Jupyter Notebook:</b> Interactive development environment for quantum programming.</li>
-                    
-                  </ul> 
-                </div>
-              </div>
-              
-              
-
-              <!-- See more button -->
-              <button class="btn btn-link p-0" data-bs-toggle="collapse" data-bs-target="#Qhackathon" aria-expanded="false" aria-controls="thesis-details" onclick="this.innerText = this.innerText==='See more...' ? 'Collapse ▲' : 'See more...'">
-                See more...
-              </button>
-
-              
-              <hr>
-              <div class="cta-section" data-aos="fade-up" data-aos-delay="200">
-                <a href="assets/Reports/QSite_Hackathon_Project_Report.pdf" class="btn btn-primary" target="_blank">
-                  <i class="bi bi-file-earmark-text"></i>
-                Project Report
-                </a>
-                <a href="https://github.com/SyedAliAsghar2001/Q-SITE-Classiq-Open-Challenge" class="btn btn-primary" target="_blank">
-                  <i class="bi bi-github"></i>
-                  Github Repo
-                </a>
-                <a href="assets/certificates/QHack 2nd position - Certificate - Ali Asghar.png" class="btn btn-primary" target="_blank">
-                  <i class="bi bi-award"></i>
-                  Certificate
-                </a>
-              </div>
-            </div>
-          </div>
 
           <!-- Hackathon Project 
           <div class="project-card" data-aos="fade-up" data-aos-delay="400">
